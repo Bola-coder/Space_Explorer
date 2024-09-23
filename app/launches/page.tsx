@@ -99,7 +99,7 @@ export default function Launches() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-10">
       {/* Search Input */}
-      <div className="flex justify-center mb-4">
+      <div className="flex justify-center mb-4 px-5">
         <input
           type="text"
           placeholder="Search by mission name or launch site"
