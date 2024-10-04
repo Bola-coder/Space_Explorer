@@ -13,13 +13,21 @@ interface Launch {
   };
 }
 
-const RocketCard: React.FC<{ launch: Launch }> = ({ launch }) => {
+const RocketCard: React.FC<{ launch: Launch }> = ({
+  launch,
+  handleSelectLaunch,
+  displayZipCode,
+}) => {
   return (
     <div
       key={launch.id}
       className="bg-gray-800 rounded-lg p-6 shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
     >
       <h2 className="text-2xl font-semibold mb-4">{launch.mission_name}</h2>
+
+      <p className="text-lg mb-2">
+        <strong>Zip Code:</strong> {displayZipCode(launch.id)}
+      </p>
       <p className="text-lg mb-2">
         <strong>Launch Date:</strong>{" "}
         {new Date(launch.launch_date_local).toLocaleDateString()}
@@ -31,6 +39,12 @@ const RocketCard: React.FC<{ launch: Launch }> = ({ launch }) => {
         <strong>Launch Site:</strong> {launch.launch_site.site_name}
       </p>
       <div className="flex justify-end">
+        <button
+          className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md mr-2"
+          onClick={() => handleSelectLaunch(launch.id)}
+        >
+          Select Launch
+        </button>
         <Link href={`/launches/${encodeURIComponent(launch.id)}`}>
           <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded-md">
             View Details

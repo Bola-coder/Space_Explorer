@@ -4,7 +4,7 @@ import LaunchesPage from "./components/LaunchesPage";
 import React, { useEffect, useState, useRef, useCallback } from "react";
 import Loading from "../components/Loading";
 import CustomError from "../components/Error";
-
+import launchLocationJson from "./../spaceX_Launches_Locations.json";
 export default function Launches() {
   const [launches, setLaunches] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -13,6 +13,7 @@ export default function Launches() {
   const [hasMore, setHasMore] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredLaunches, setFilteredLaunches] = useState<any[]>([]);
+  const [selectedLaunches, setSelectedLaunches] = useState<any>([]);
 
   const observerRef = useRef<IntersectionObserver | null>(null);
   const loadMoreRef = useRef<HTMLDivElement | null>(null);
@@ -86,6 +87,32 @@ export default function Launches() {
     }
   }, [launches, searchQuery]);
 
+  const handleSelectLaunch = (id: string) => {
+    const selected = launches.filter((launch) => launch.id === id);
+    const launchExist = selectedLaunches.filter((launch) => launch.id === id);
+    if (launchExist.length !== 0) {
+      return;
+    }
+    setSelectedLaunches((curr) => [...curr, selected[0]]);
+  };
+
+  // console.log(launchLocationJson);
+
+  const displayZipCode = (id: string) => {
+    const foundLocation = launchLocationJson.filter(
+      (location) => location.id === id
+    );
+    if (foundLocation.length === 0) {
+      return "NA";
+    }
+    if (foundLocation[0].zip_code.trim() === "") {
+      return "NA";
+    }
+    return foundLocation[0].zip_code;
+  };
+
+  // console.log(displayZipCode("uffufu"));
+
   if (loading && launches.length === 0) return <Loading />;
   if (error)
     return (
@@ -98,6 +125,14 @@ export default function Launches() {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white py-10">
+      <div className="mb-4 p-3">
+        {selectedLaunches &&
+          selectedLaunches.map((launch) => (
+            <div key={launch.id}>
+              <h1 className="text-white">{launch.mission_name}</h1>
+            </div>
+          ))}
+      </div>
       {/* Search Input */}
       <div className="flex justify-center mb-4 px-5">
         <input
@@ -109,7 +144,11 @@ export default function Launches() {
         />
       </div>
 
-      <LaunchesPage launches={filteredLaunches} />
+      <LaunchesPage
+        launches={filteredLaunches}
+        handleSelectLaunch={handleSelectLaunch}
+        displayZipCode={displayZipCode}
+      />
       <div ref={loadMoreRef} className="flex justify-center mt-6">
         {loading && hasMore && <p>Loading more...</p>}
         {!hasMore && <p>No more launches to load.</p>}

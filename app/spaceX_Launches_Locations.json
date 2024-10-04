@@ -1,0 +1,184 @@
+[
+  {
+    "city": "Vandenberg AFB",
+    "id": "6243aec2af52800c6e91925d",
+    "zip_code": "93437",
+    "weather": {
+      "temperature": 62,
+      "condition": "Partly Cloudy",
+      "wind": "10 mph NW"
+    }
+  },
+  {
+    "city": "Cape Canaveral",
+    "id": "63161345ffc78f3b8567070d",
+    "zip_code": "32920",
+    "weather": {
+      "temperature": 80,
+      "condition": "Sunny",
+      "wind": "5 mph NE"
+    }
+  },
+  {
+    "city": "Kennedy Space Center",
+    "zip_code": "32899",
+    "weather": {
+      "temperature": 78,
+      "condition": "Partly Cloudy",
+      "wind": "8 mph E"
+    }
+  },
+  {
+    "city": "Brownsville",
+    "zip_code": "78355",
+    "weather": {
+      "temperature": 85,
+      "condition": "Clear",
+      "wind": "2 mph SE"
+    }
+  },
+  {
+    "city": "Wallops Island",
+    "zip_code": "23320",
+    "weather": {
+      "temperature": 75,
+      "condition": "Rainy",
+      "wind": "15 mph N"
+    }
+  },
+  {
+    "city": "Kodiak",
+    "zip_code": "99615",
+    "weather": {
+      "temperature": 45,
+      "condition": "Cloudy",
+      "wind": "20 mph W"
+    }
+  },
+  {
+    "city": "Kourou",
+    "zip_code": "97354",
+    "weather": {
+      "temperature": 88,
+      "condition": "Humid",
+      "wind": "7 mph E"
+    }
+  },
+  {
+    "city": "Minamitane",
+    "zip_code": "891-3701",
+    "weather": {
+      "temperature": 70,
+      "condition": "Sunny",
+      "wind": "12 mph S"
+    }
+  },
+  {
+    "city": "Sriharikota",
+    "zip_code": "524124",
+    "weather": {
+      "temperature": 92,
+      "condition": "Hot",
+      "wind": "3 mph SW"
+    }
+  },
+  {
+    "city": "Jiuquan",
+    "zip_code": "732750",
+    "weather": {
+      "temperature": 55,
+      "condition": "Windy",
+      "wind": "25 mph NW"
+    }
+  },
+  {
+    "city": "Baikonur",
+    "zip_code": "090013",
+    "weather": {
+      "temperature": 32,
+      "condition": "Snowy",
+      "wind": "10 mph NE"
+    }
+  },
+  {
+    "city": "Mirny",
+    "zip_code": "163000",
+    "weather": {
+      "temperature": 28,
+      "condition": "Freezing",
+      "wind": "5 mph SE"
+    }
+  },
+  {
+    "city": "Tsiolkovsky",
+    "zip_code": "676010",
+    "weather": {
+      "temperature": 40,
+      "condition": "Cloudy",
+      "wind": "18 mph N"
+    }
+  },
+  {
+    "city": "Xichang",
+    "zip_code": "615500",
+    "weather": {
+      "temperature": 75,
+      "condition": "Rainy",
+      "wind": "12 mph SW"
+    }
+  },
+  {
+    "city": "Taiyuan",
+    "zip_code": "030000",
+    "weather": {
+      "temperature": 60,
+      "condition": "Partly Cloudy",
+      "wind": "8 mph E"
+    }
+  },
+  {
+    "city": "Wenchang",
+    "zip_code": "571340",
+    "weather": {
+      "temperature": 82,
+      "condition": "Humid",
+      "wind": "5 mph SE"
+    }
+  },
+  {
+    "city": "Kourou",
+    "zip_code": "97310",
+    "weather": {
+      "temperature": 85,
+      "condition": "Sunny",
+      "wind": "7 mph NE"
+    }
+  },
+  {
+    "city": "Palmachim",
+    "zip_code": "70400",
+    "weather": {
+      "temperature": 72,
+      "condition": "Clear",
+      "wind": "10 mph NW"
+    }
+  },
+  {
+    "city": "Semnan",
+    "zip_code": "35195",
+    "weather": {
+      "temperature": 68,
+      "condition": "Windy",
+      "wind": "15 mph SW"
+    }
+  },
+  {
+    "city": "Dongchang-ri",
+    "zip_code": "N/A",
+    "weather": {
+      "temperature": 50,
+      "condition": "Cloudy",
+      "wind": "12 mph N"
+    }
+  }
+]

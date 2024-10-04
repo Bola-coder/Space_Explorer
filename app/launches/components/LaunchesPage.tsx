@@ -19,7 +19,11 @@ interface LaunchesPageProps {
   launches: Launch[];
 }
 
-export default function LaunchesPage({ launches }: LaunchesPageProps) {
+export default function LaunchesPage({
+  launches,
+  handleSelectLaunch,
+  displayZipCode,
+}: LaunchesPageProps) {
   // console.log("Launches is: ", launches);
   return (
     <div className="min-h-screen bg-gray-900 text-white py-10">
@@ -29,7 +33,11 @@ export default function LaunchesPage({ launches }: LaunchesPageProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-5 max-w-6xl mx-auto cursor-pointer">
         {launches.map((launch, index) => (
           <div key={index}>
-            <RocketCard launch={launch} />
+            <RocketCard
+              launch={launch}
+              handleSelectLaunch={handleSelectLaunch}
+              displayZipCode={displayZipCode}
+            />
           </div>
         ))}
       </div>
